@@ -42,8 +42,8 @@
   - Для ввода значений null использовать пустую строку.
   - Поля с комментарием "Значение этого поля должно генерироваться автоматически" не должны вводиться пользователем вручную при добавлении.
 ### Описание хранимых в коллекции классов:
-
-- public class Organization {
+```
+    public class Organization {
     private Long id; //Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой
     private Coordinates coordinates; //Поле не может быть null
@@ -53,18 +53,19 @@
     private OrganizationType type; //Поле может быть null
     private Address officialAddress; //Поле может быть null
 }
-- public class Coordinates {
+  public class Coordinates {
     private Double x; //Максимальное значение поля: 76, Поле не может быть null
     private Float y; //Поле не может быть null
 }
-- public class Address {
+  public class Address {
     private String street; //Строка не может быть пустой, Поле может быть null
     private String zipCode; //Поле может быть null
 }
-- public enum OrganizationType {
+  public enum OrganizationType {
     COMMERCIAL,
     PUBLIC,
     TRUST,
     PRIVATE_LIMITED_COMPANY,
     OPEN_JOINT_STOCK_COMPANY;
 }
+```
